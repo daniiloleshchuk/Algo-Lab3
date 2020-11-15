@@ -12,7 +12,3 @@ def get_data(filename: str):
             graph.create_edges_from_vertexes(start, end, weight)
 
     return n, m, clients, graph
-
-
-if __name__ == '__main__':
-   print(get_data('../in/in1'))
