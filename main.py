@@ -1,5 +1,6 @@
 from logic.dejkstra import dejkstra
 from logic.get_data import get_data
+from logic.write_data import write_data
 
 
 def main():
@@ -13,6 +14,8 @@ def main():
                 min_max_latency = current_max_latency
             elif current_max_latency < min_max_latency:
                 min_max_latency = current_max_latency
+
+    write_data('out/out1', min_max_latency)
 
     return min_max_latency
 
