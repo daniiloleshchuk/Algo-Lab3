@@ -9,7 +9,7 @@ def dejkstra(graph: Graph, start_vertex_id: int):
     distances[start_vertex_id] = 0
 
     if start_vertex_id not in graph.connections:
-        return distances
+        raise ValueError('Not found start_vertex_id in graph vertexes')
 
     available_vertexes_queue = PriorityQueue()
     available_vertexes_queue.put((0, start_vertex_id))
